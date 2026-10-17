@@ -1,0 +1,31 @@
+{
+ "zip": "/tmp/claude-0/-home-claude/4f90be2f-2cae-52cb-8030-275a7b847bc2/scratchpad/release/aeris-site-v6.0.zip",
+ "bundle": "/tmp/claude-0/-home-claude/4f90be2f-2cae-52cb-8030-275a7b847bc2/scratchpad/release/aeris-site-v6.0-git.bundle",
+ "ref": "aeris-v6.0",
+ "zip_sha256": "bbdb7c87426b24b246d61c2f98b24de0336c08def435745234c1747c5b0b4488",
+ "bundle_sha256": "62cf7a2d8a1dc155324e0e9095d0a51e4b9709082c74423a622b7947c95ed0f0",
+ "bundle_verifies": true,
+ "bundle_verify_output": [
+  "The bundle records a complete history.",
+  "The bundle uses this hash algorithm: sha1",
+  "/tmp/claude-0/-home-claude/4f90be2f-2cae-52cb-8030-275a7b847bc2/scratchpad/release/aeris-site-v6.0-git.bundle is okay"
+ ],
+ "bundle_refs": [
+  "1023e09005dd5271a7cae7602222e5c9088902a1 refs/heads/master",
+  "5278d1108656e4a781084881b550e2924eeacc4b refs/heads/v6.0",
+  "9b3bf1708c64016101efaf2ca92ef1710d2f26f5 refs/tags/aeris-v5",
+  "14b2a9c86abd6b44f1af421a2617833ca1a6828e refs/tags/aeris-v5.1",
+  "7c315e9e3ad965d9ce47530abdb15a242a88f158 refs/tags/aeris-v5.2",
+  "c8ba81ea8aa8b4d47a1efb8816b228733c2a51b4 refs/tags/aeris-v6.0",
+  ""
+ ],
+ "commit": "5278d1108656e4a781084881b550e2924eeacc4b",
+ "commits_in_history": 67,
+ "top_folder": "aeris-v6.0",
+ "archive_files": 1183,
+ "tracked_files": 1183,
+ "only_in_archive": [],
+ "only_in_commit": [],
+ "different_bytes": [],
+ "ok": true
+}

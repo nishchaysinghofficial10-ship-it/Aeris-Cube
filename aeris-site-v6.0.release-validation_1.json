@@ -1,0 +1,614 @@
+{
+ "steps": [
+  {
+   "step": "archive",
+   "passed": true,
+   "details": {
+    "files": 1183,
+    "top_folder": "aeris-v6.0",
+    "expected_top_folder": "aeris-v6.0",
+    "missing": [],
+    "forbidden": [],
+    "bytes": 13018624
+   },
+   "seconds": 0.1
+  },
+  {
+   "step": "extract",
+   "passed": true,
+   "details": {
+    "root": "/tmp/aeris-release-ch5m8lbq/x/aeris-v6.0"
+   },
+   "seconds": 0.2
+  },
+  {
+   "step": "install",
+   "passed": true,
+   "details": {
+    "python": "Python 3.12.3",
+    "lock_mismatches": {},
+    "output": "creating /tmp/aeris-release-ch5m8lbq/x/aeris-v6.0/backend/.venv with Python 3.12.3\ninstalled: Python 3.12.3 \u00b7 aeris-research-engine 1.1.0 \u00b7 backend aeris-research-backend 1.2.0 \u00b7 FastAPI 0.141.1 \u00b7 NumPy 2.5.3 \u00b7 SciPy 1.18.1\nnode v22.22.2 found (needed only for the JavaScript test suites)\ndone. Start with: scripts/start.sh   (stop: scripts/stop.sh)\n"
+   },
+   "seconds": 47.3
+  },
+  {
+   "step": "start",
+   "passed": true,
+   "details": {
+    "exit": 0,
+    "output": "AERIS backend + site: http://127.0.0.1:60401/   (pid 768; database /tmp/aeris-release-ch5m8lbq/data/aeris.sqlite3; log /tmp/aeris-release-ch5m8lbq/data/logs/backend.log)\nSYNTHETIC telemetry emulator on 127.0.0.1:51673 (pid 792) \u2014 simulated data, not the physical cube\n",
+    "health": {
+     "version": "1.2.0",
+     "engine_version": "aeris-research-engine 1.1.0",
+     "schema_version": 3,
+     "metrics_version": "2"
+    }
+   },
+   "seconds": 1.5
+  },
+  {
+   "step": "experiment",
+   "passed": true,
+   "details": {
+    "run": "run-455ad27f579d448e97955f1919561a47",
+    "experiment_id": "AERIS-EXP-100000",
+    "outcome": "recovered",
+    "research_recovered": true
+   },
+   "seconds": 1.9
+  },
+  {
+   "step": "reproduce",
+   "passed": true,
+   "details": {
+    "retrieved_identical": true,
+    "reproduction": {
+     "identical": true,
+     "verdict": "identical",
+     "max_abs_diff": 0.0
+    }
+   },
+   "seconds": 1.3
+  },
+  {
+   "step": "restart",
+   "passed": true,
+   "details": {
+    "done_before_stop": 5,
+    "state": "complete",
+    "restarts": 1,
+    "rows": 72,
+    "unique_rows": 72,
+    "total": 72,
+    "earlier_run_unchanged": true,
+    "stop_output": "stopped emulator (pid 792)\nstopped backend (pid 768)"
+   },
+   "seconds": 20.9
+  },
+  {
+   "step": "sweep-cancel",
+   "passed": true,
+   "details": {
+    "state": "cancelled",
+    "rows": 5,
+    "total": 72,
+    "dataset": "AERIS-DS-100000",
+    "integrity": {
+     "members_hash_ok": true,
+     "member_content_ok": true,
+     "changed_members": [],
+     "note": null
+    }
+   },
+   "seconds": 1.3
+  },
+  {
+   "step": "telemetry",
+   "passed": true,
+   "details": {
+    "provenance_label": "SYNTHETIC EMULATOR \u2014 not the physical cube",
+    "recording": "AERIS-HW-000001",
+    "samples": 120,
+    "replay_frames": 120
+   },
+   "seconds": 1.7
+  },
+  {
+   "step": "telemetry-provenance",
+   "passed": true,
+   "details": {
+    "note": "the declared-physical source is an ARTIFICIAL test fixture in validate_release.py, not a device",
+    "declared_physical": {
+     "id": "AERIS-HW-000002",
+     "synthetic": false,
+     "trust": "declared-physical"
+    },
+    "mixed": {
+     "id": "AERIS-HW-000003",
+     "synthetic": true,
+     "trust": "synthetic",
+     "segments": [
+      [
+       "physical",
+       false
+      ],
+      [
+       "emulator",
+       true
+      ]
+     ]
+    },
+    "exported_hellos": [
+     [
+      "file-replay",
+      true,
+      "synthetic"
+     ],
+     [
+      "emulator",
+      true,
+      "synthetic"
+     ]
+    ],
+    "rerecorded": {
+     "id": "AERIS-HW-000004",
+     "synthetic": true,
+     "trust": "synthetic",
+     "derived": true
+    },
+    "comparison": {
+     "admissible": false,
+     "reasons": [
+      "The recording is SYNTHETIC (mixed; the recording is marked synthetic; a source segment declared synthetic data or has a synthetic ancestor; an emulator or test source contributed data; segment 1 is synthetic; segment 2 is synthetic; it derives from synthetic data (AERIS-HW-000003)): it is not a measurement and can never be validation evidence.",
+      "No telemetry source declared this recording as coming from a physical device.",
+      "The recording was captured from a replay (release-validation-mixed.ndjson): a copy of earlier data, not an original measurement; compare the original recording."
+     ]
+    },
+    "dataset": {
+     "id": "AERIS-DS-100001",
+     "source": "synthetic-telemetry"
+    }
+   },
+   "seconds": 4.6
+  },
+  {
+   "step": "telemetry-restart",
+   "passed": true,
+   "details": {
+    "stream_before": "20261013T150319-82239655bb0e",
+    "cursor_before": 677,
+    "stream_after": "20261013T150346-02cc29c0ed01",
+    "answer_first_n": 1,
+    "answer_frames": 10,
+    "stream_changed": true,
+    "v5_style_answer_frames": 0
+   },
+   "seconds": 6.4
+  },
+  {
+   "step": "telemetry-units",
+   "passed": true,
+   "details": {
+    "recording": "AERIS-HW-000005",
+    "export_status": 200,
+    "frames": 80,
+    "frame_mismatches": [],
+    "converted": {
+     "t": "ms \u2192 s",
+     "theta": "deg \u2192 rad",
+     "w_x": "deg/s \u2192 rad/s",
+     "w_y": "deg/s \u2192 rad/s",
+     "w_z": "deg/s \u2192 rad/s",
+     "omega_x": "rad/s \u2192 rpm",
+     "omega_y": "rad/s \u2192 rpm",
+     "omega_z": "rad/s \u2192 rpm",
+     "torque_cmd_x": "mN\u00b7m \u2192 N\u00b7m",
+     "torque_cmd_y": "mN\u00b7m \u2192 N\u00b7m",
+     "torque_cmd_z": "mN\u00b7m \u2192 N\u00b7m",
+     "accel_x": "g \u2192 m/s\u00b2",
+     "accel_y": "g \u2192 m/s\u00b2",
+     "accel_z": "g \u2192 m/s\u00b2"
+    },
+    "rerecorded": {
+     "id": "AERIS-HW-000006",
+     "units": {
+      "t": "s",
+      "theta": "rad",
+      "w_x": "rad/s",
+      "wheel_rpm_x": "rpm",
+      "torque_cmd_x": "N\u00b7m",
+      "accel_x": "m/s\u00b2"
+     },
+     "rows_matched": 79,
+     "value_mismatches": [],
+     "interval_mismatches": []
+    },
+    "incomplete_vector": {
+     "status": 422,
+     "code": "export_not_possible",
+     "omit_unmapped_status": 200,
+     "omitted": {
+      "columns": [
+       "w_x",
+       "w_y"
+      ],
+      "count": 2,
+      "reasons": [
+       "incomplete w vector (missing w_z)"
+      ],
+      "by": "omit_unmapped=true"
+     }
+    },
+    "stored_original_unchanged": true
+   },
+   "seconds": 1.7
+  },
+  {
+   "step": "telemetry-generations",
+   "passed": true,
+   "details": {
+    "generations": 20,
+    "max_lineage_bytes": 3068,
+    "budget": 6144,
+    "first": {
+     "generation": 1,
+     "lineage_bytes": [
+      554,
+      260
+     ],
+     "hello_errors": 0,
+     "longest_line": 983,
+     "rejected": 0,
+     "rows": [
+      12,
+      12
+     ],
+     "lineage_generation": [
+      1
+     ],
+     "trust": "synthetic",
+     "synthetic": true
+    },
+    "last": {
+     "generation": 20,
+     "lineage_bytes": [
+      3068,
+      3047
+     ],
+     "hello_errors": 0,
+     "longest_line": 3314,
+     "rejected": 0,
+     "rows": [
+      12,
+      12
+     ],
+     "lineage_generation": [
+      20
+     ],
+     "trust": "synthetic",
+     "synthetic": true
+    },
+    "imported": "AERIS-HW-000008",
+    "imported_trust": "synthetic",
+    "export_generation": [
+     21
+    ],
+    "comparison_admissible": false
+   },
+   "seconds": 0.2
+  },
+  {
+   "step": "device-journey",
+   "passed": true,
+   "details": {
+    "hostsim": "built from the package's firmware sources (SYNTHETIC device: firmware core + device models)",
+    "api_v6": {
+     "auth": {
+      "mode": "local",
+      "enabled": true,
+      "problem": null,
+      "public_origin": null,
+      "issuer": null,
+      "audience": null,
+      "development_fixture": false
+     }
+    },
+    "pairing": {
+     "device_id": "synthetic-release-0001",
+     "route": [
+      "companion"
+     ],
+     "synthetic": true,
+     "board_kind": "emulator",
+     "registered_only_after_local_confirmation": true
+    },
+    "calibration": {
+     "id": "AERIS-CAL-000001",
+     "to_body": [
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1
+     ],
+     "wheel_directions_confirmed": true
+    },
+    "experiment": {
+     "config_hash": "cba6e773fd0ccec2437f8d15441435a9e7c731921d801398bf87f40e280fc7e8",
+     "waited_for_local_enable": true,
+     "ended": "duration reached",
+     "recording": "AERIS-HW-000009",
+     "recording_synthetic": true,
+     "samples": 229
+    },
+    "twin": {
+     "run": "run-12f27be143c74d6a9149ff8d917dc9fe",
+     "compared_signals": [
+      "attitude",
+      "rate_w_x"
+     ],
+     "admissible_as_validation_evidence": false
+    },
+    "export": {
+     "reimported_same_content_hash": true,
+     "ndjson_hello_synthetic": true
+    },
+    "gateway": {
+     "routes": [
+      "gateway"
+     ],
+     "telemetry_catchup": {
+      "session": "05fc9e298fd8ecce-2",
+      "after": 481,
+      "through": 482,
+      "recovered": 1,
+      "missing": 0,
+      "late": 1,
+      "ended": "complete",
+      "route": "gateway"
+     }
+    },
+    "revocation": {
+     "refused": "bridge ended: backend closed (4401 authentication refused (unknown, revoked or unpaired device))"
+    }
+   },
+   "seconds": 23.7
+  },
+  {
+   "step": "test-runner",
+   "passed": true,
+   "details": {
+    "playwright_in_fresh_venv": false,
+    "browser_run": {
+     "exit": 2,
+     "verdict": "INCOMPLETE \u2014 7 suite(s) not run (browser:browser_check, browser:browser_v3, browser:browser_v4, browser:browser_v5, browser:browser_v51, browser:browser_v52, browser:browser_v6). No suite ran. Not a full validation.",
+     "reasons": [
+      "browser Python: 'backend/.venv/bin/python' \u2192 /tmp/aeris-release-ch5m8lbq/x/aeris-v6.0/backend/.venv/bin/python: Playwright is not importable (ModuleNotFoundError: No module named 'playwright'); install it for this interpreter (pip install playwright; python -m playwright install chromium)"
+     ],
+     "browser_python": {
+      "path": null,
+      "source": "--browser-python",
+      "given": "backend/.venv/bin/python",
+      "problem": "'backend/.venv/bin/python' \u2192 /tmp/aeris-release-ch5m8lbq/x/aeris-v6.0/backend/.venv/bin/python: Playwright is not importable (ModuleNotFoundError: No module named 'playwright'); install it for this interpreter (pip install playwright; python -m playwright install chromium)"
+     }
+    },
+    "selection_run": {
+     "exit": 0,
+     "verdict": "PASSED \u2014 selected suites only (1 of 26); every test case in them executed and passed; not selected: drift, backend, firmware:host, firmware:qemu, js:assistant, js:connect, js:engine, js:numerics, js:platform, js:procs, js:resume, js:runs, js:service, js:ui, js:v4, js:v5, js:v51, live, browser:browser_check, browser:browser_v3, browser:browser_v4, browser:browser_v5, browser:browser_v51, browser:browser_v52, browser:browser_v6. Not a full validation."
+    },
+    "skipped_case_fixture": {
+     "skip": {
+      "exit": 2,
+      "verdict": "INCOMPLETE \u2014 test cases not executed in backend: 1 skipped \u2014 backend::tests.test_skip::test_skipped (controlled release-validation skip). Nothing failed in the 1 suite(s) that ran. Not a full validation.",
+      "full_validation": false,
+      "complete": false,
+      "skipped_tests": [
+       "tests.test_skip::test_skipped"
+      ],
+      "platform_exclusions": []
+     },
+     "excluded": {
+      "exit": 3,
+      "verdict": "PASSED WITH DECLARED PLATFORM EXCLUSIONS \u2014 1 suite(s) ran with no failures (selected suites only); 1 test case(s) not executed on linux, excluded by policy.json: backend::tests.test_skip::test_skipped \u2014 release-validation fixture (counterpart passed: tests.test_skip::test_ok). Not a full validation.",
+      "full_validation": false,
+      "complete": false,
+      "skipped_tests": [
+       "tests.test_skip::test_skipped"
+      ],
+      "platform_exclusions": [
+       "tests.test_skip::test_skipped"
+      ]
+     }
+    },
+    "exclusion_policy": {
+     "entries": 1,
+     "tests_not_found": []
+    },
+    "stderr_tail": ""
+   },
+   "seconds": 1.9
+  },
+  {
+   "step": "drift",
+   "passed": true,
+   "details": {
+    "exit": 0,
+    "status": "passed",
+    "reason": null,
+    "counts": {
+     "passed": 12,
+     "failed": 0,
+     "skipped": 0,
+     "not_run": 0,
+     "total": 12
+    },
+    "lines": [
+     "PASS     index.html is generated from build/templates \u2014 same    site/index.html",
+     "PASS     site/schemas are generated from the platform modules \u2014 same    site/schemas/aeris-parameter-set-1.schema.json | same    site/schemas/aeris-validation-protocol-1.schema.json",
+     "PASS     kit documents, BOM copy and BUILD_GUIDE.md are generated from the BOM",
+     "PASS     site data (profiles, recipes, configurations, plant models, aeris-data.js, wasm.js) is generated from the backend",
+     "PASS     hardware/SIZING.md generated block equals the sizing calculation",
+     "PASS     firmware test fixtures are generated from the backend \u2014 same    plant_corner.json | same    plant_edge.json",
+     "PASS     browser calibration parity cases are generated from the backend",
+     "PASS     firmware release manifest: signature, trust list and part hashes \u2014 signature valid, key trust: development, 3 parts match",
+     "PASS     signed release images were built from the current firmware sources \u2014 firmware_sources_sha256 64e9b4ae0512 (build 547fb1221446-release)",
+     "PASS     WebAssembly device was built from the current sources \u2014 sources 8e8358c824a5, module fde1f6979178",
+     "PASS     WebAssembly device rebuilds byte-identical \u2014 rebuilt fde1f6979178, committed fde1f6979178 (Ubuntu clang version 18.1.3 (1ubuntu1))",
+     "PASS     vendored files match site/vendor/VENDORED.md \u2014 2 files"
+    ]
+   },
+   "seconds": 9.6
+  },
+  {
+   "step": "firmware-host",
+   "passed": true,
+   "details": {
+    "exit": 0,
+    "status": "passed",
+    "reason": null,
+    "counts": {
+     "passed": 38,
+     "failed": 0,
+     "skipped": 0,
+     "not_run": 0,
+     "total": 38
+    },
+    "lines": [
+     "# firmware core tests: 38 passed, 0 failed"
+    ]
+   },
+   "seconds": 6.7
+  },
+  {
+   "step": "browser-cancel",
+   "passed": true,
+   "details": {
+    "browser_python": "/home/claude/aeris-v6/.venv/bin/python",
+    "browser_v52": {
+     "exit": 0,
+     "result": "45 / 45 v5.2 browser checks passed",
+     "failed": [],
+     "cancel_checks": [
+      "PASS Before start (QUEUED): Cancel is offered; the job ends CANCELLED with no run computed, labelled PARTIAL, nothing analysed",
+      "PASS Before start: after the cancellation the Cancel button is hidden and reset",
+      "PASS [full speed #1] Cancel while running (19/390 done): CANCELLED with exactly those rows, PARTIAL, bounded wait",
+      "PASS [full speed #1] After the cancellation the Cancel button is hidden and reset ('Cancel', enabled) for the next sweep",
+      "PASS [full speed #1] The cancelled sweep's rows equal an independent recomputation, and its analysis uses only those rows",
+      "PASS [full speed #2] Cancel while running (16/390 done): CANCELLED with exactly those rows, PARTIAL, bounded wait",
+      "PASS [full speed #2] After the cancellation the Cancel button is hidden and reset ('Cancel', enabled) for the next sweep",
+      "PASS [full speed #2] The cancelled sweep's rows equal an independent recomputation, and its analysis uses only those rows",
+      "PASS [full speed #3] Cancel while running (19/390 done): CANCELLED with exactly those rows, PARTIAL, bounded wait",
+      "PASS [full speed #3] After the cancellation the Cancel button is hidden and reset ('Cancel', enabled) for the next sweep",
+      "PASS [full speed #3] The cancelled sweep's rows equal an independent recomputation, and its analysis uses only those rows",
+      "PASS [full speed] ANALYZING: the Cancel button is hidden when the job enters it (the browser engine does not interrupt its analysis)",
+      "PASS [full speed first sweep] Cancel while running (20/390 done): CANCELLED with exactly those rows, PARTIAL, bounded wait",
+      "PASS [full speed first sweep] After the cancellation the Cancel button is hidden and reset ('Cancel', enabled) for the next sweep",
+      "PASS [full speed first sweep] The cancelled sweep's rows equal an independent recomputation, and its analysis uses only those rows",
+      "PASS [full speed] After a cancelled sweep, the next sweep's Cancel button is usable ('Cancel', enabled) and cancels it",
+      "PASS [CPU 4x slower #1] Cancel while running (6/390 done): CANCELLED with exactly those rows, PARTIAL, bounded wait",
+      "PASS [CPU 4x slower #1] After the cancellation the Cancel button is hidden and reset ('Cancel', enabled) for the next sweep",
+      "PASS [CPU 4x slower #1] The cancelled sweep's rows equal an independent recomputation, and its analysis uses only those rows",
+      "PASS [CPU 4x slower #2] Cancel while running (9/390 done): CANCELLED with exactly those rows, PARTIAL, bounded wait",
+      "PASS [CPU 4x slower #2] After the cancellation the Cancel button is hidden and reset ('Cancel', enabled) for the next sweep",
+      "PASS [CPU 4x slower #2] The cancelled sweep's rows equal an independent recomputation, and its analysis uses only those rows",
+      "PASS [CPU 4x slower #3] Cancel while running (9/390 done): CANCELLED with exactly those rows, PARTIAL, bounded wait",
+      "PASS [CPU 4x slower #3] After the cancellation the Cancel button is hidden and reset ('Cancel', enabled) for the next sweep",
+      "PASS [CPU 4x slower #3] The cancelled sweep's rows equal an independent recomputation, and its analysis uses only those rows",
+      "PASS [CPU 4x slower] ANALYZING: the Cancel button is hidden when the job enters it (the browser engine does not interrupt its analysis)",
+      "PASS [CPU 4x slower first sweep] Cancel while running (10/390 done): CANCELLED with exactly those rows, PARTIAL, bounded wait",
+      "PASS [CPU 4x slower first sweep] After the cancellation the Cancel button is hidden and reset ('Cancel', enabled) for the next sweep",
+      "PASS [CPU 4x slower first sweep] The cancelled sweep's rows equal an independent recomputation, and its analysis uses only those rows",
+      "PASS [CPU 4x slower] After a cancelled sweep, the next sweep's Cancel button is usable ('Cancel', enabled) and cancels it",
+      "PASS After completion: the Cancel button is hidden and a request changes nothing (result identical, COMPLETE, not PARTIAL)",
+      "PASS After completion: a request sent anyway leaves the hidden button reset (not 'Cancelling\u2026')"
+     ]
+    },
+    "browser_v3": {
+     "exit": 0,
+     "result": "49 / 49 v3 browser checks passed",
+     "failed": [],
+     "cancel_checks": [
+      "PASS Cancelling a sweep while it runs (0 < done < total) stops it and keeps exactly the finished runs as PARTIAL"
+     ]
+    }
+   },
+   "seconds": 136.5
+  },
+  {
+   "step": "browser-v6",
+   "passed": true,
+   "details": {
+    "browser_python": "/home/claude/aeris-v6/.venv/bin/python",
+    "exit": 0,
+    "result": "51 / 51 v6 browser checks passed",
+    "failed": [],
+    "not_run": []
+   },
+   "seconds": 211.8
+  },
+  {
+   "step": "backup",
+   "passed": true,
+   "details": {
+    "backup_tables": {
+     "jobs": 5,
+     "runs": 3,
+     "sweeps": 2,
+     "sweep_rows": 77,
+     "docs": 17,
+     "devices": 1,
+     "pairings": 1,
+     "leases": 0,
+     "commands": 12
+    },
+    "restored_schema": 3,
+    "datasets": [
+     {
+      "id": "AERIS-DS-100001",
+      "status": "exploratory",
+      "members": 2,
+      "integrity": null
+     },
+     {
+      "id": "AERIS-DS-100000",
+      "status": "final",
+      "members": 1,
+      "integrity": {
+       "members_hash_ok": true,
+       "member_content_ok": true,
+       "changed_members": [],
+       "note": null
+      }
+     }
+    ]
+   },
+   "seconds": 0.3
+  },
+  {
+   "step": "stop",
+   "passed": true,
+   "details": {
+    "output": "stopped emulator (pid 954)\nstopped backend (pid 933)",
+    "pid_files_left": []
+   },
+   "seconds": 3.9
+  }
+ ],
+ "environment": {
+  "platform": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.39",
+  "python": "3.11.15"
+ },
+ "zip": "/tmp/claude-0/-home-claude/4f90be2f-2cae-52cb-8030-275a7b847bc2/scratchpad/release/aeris-site-v6.0.zip",
+ "workdir": "/tmp/aeris-release-ch5m8lbq",
+ "started": "2026-10-13T15:02:21+00:00",
+ "finished": "2026-10-13T15:10:24+00:00",
+ "all_passed": true,
+ "not_executed": [],
+ "failed_steps": [],
+ "exit_code": 0,
+ "steps_expected": 21
+}
